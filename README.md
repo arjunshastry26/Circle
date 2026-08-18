@@ -17,26 +17,8 @@ The project demonstrates a simple but realistic architecture for an LLM gateway:
 
 This is a good sample project for learning API abstraction, request routing, provider adapters, and backend service composition.
 
-## Architecture
 
-```text
-Client
-  |
-  v
-Gateway API (FastAPI)
-  |-- Auth: validates caller API key
-  |-- Rate limit: checks per-key fixed-window usage in Redis
-  |-- Router: resolves "provider/model" to correct adapter + provider secret
-  |-- Adapter: translates unified request into provider-specific request
-  v
-Provider APIs (OpenAI / Anthropic / Groq)
-  |
-  v
-Adapter normalizes stream chunks back into OpenAI-like SSE response
-  |
-  +--> Client receives streaming output
-  |
-  +--> Postgres usage ledger stores token usage + estimated cost
+[Architecture](docs/architecture-diagram.svg)
 ```
 
 ### Request flow
@@ -327,12 +309,4 @@ These are normal provider-side problems, not app bugs. Common symptoms:
 
 You must fix those in the provider console.
 
-## License
 
-This project is provided as a learning/demo application. You can adapt it for personal or educational use.
-
-## Summary
-
-This repository is a compact example of an LLM gateway that unifies access to multiple providers behind one API. It demonstrates routing, streaming, authentication, rate limiting, and usage tracking in a practical and readable way.
-
-If you want to extend it, the most natural next steps are provider failover, better rate limiting, and a small web dashboard.
