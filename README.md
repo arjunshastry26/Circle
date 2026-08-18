@@ -1,4 +1,4 @@
-﻿# OpenRouter Clone
+﻿# Circle 
 
 A minimal OpenRouter-style LLM gateway built with FastAPI. It exposes one OpenAI-compatible `/v1/chat/completions` endpoint, routes requests to different providers, enforces API-key authentication and rate limits, and logs usage/cost metrics to Postgres.
 
