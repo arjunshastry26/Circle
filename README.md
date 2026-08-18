@@ -18,7 +18,10 @@ The project demonstrates a simple but realistic architecture for an LLM gateway:
 This is a good sample project for learning API abstraction, request routing, provider adapters, and backend service composition.
 
 
-[Architecture](docs/architecture-diagram.svg)
+[Architecture]
+
+<img width="2527" height="1313" alt="image" src="https://github.com/user-attachments/assets/1f028b24-47ce-4b3d-8306-1ed1bc3a7857" />
+
 ```
 
 ### Request flow
